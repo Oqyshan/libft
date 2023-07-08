@@ -6,7 +6,24 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:35:03 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/05 15:20:54 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/08 14:10:26 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*str;
+
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		if (((unsigned char *)str)[i] == (unsigned char)c)
+			return (&str[i]);
+		i++;
+	}
+	return (0);
+}
