@@ -6,7 +6,7 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:34:18 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/07 17:05:06 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/09 21:29:36 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,25 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	a;
-	size_t	b;
+	size_t	i;
+	size_t	j;
+	size_t	n_len;
 
-	a = 0;
-	if (needle[0] == '\0')
+	i = 0;
+	n_len = ft_strlen(needle);
+	if (!haystack)
+		return (NULL);
+	if (!n_len || haystack == needle)
 		return ((char *)haystack);
-	while (haystack[a] != '\0')
+	while (((char *)(haystack))[i] != '\0' && i < len)
 	{
-		b = 0;
-		while (haystack[a + b] == needle[b] && a + b < len)
-		{
-			if (haystack[a + b] == '\0' && needle[b] == '\0')
-				return ((char *)&haystack[a]);
-			b++;
-		}
-		if (needle[b] == '\0')
-			return ((char *)haystack + a);
-		a++;
+		j = 0;
+		while (((char *)(haystack))[i + j] && needle[j] &&
+		(((char *)(haystack))[i + j] == needle[j] && i + j < len))
+			j++;
+		if (j == n_len)
+			return ((char *)haystack + i);
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

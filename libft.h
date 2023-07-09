@@ -6,7 +6,7 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 15:30:07 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/08 17:00:33 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/09 21:35:39 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isalpha(int nb);
 int		ft_isascii(int c);
 int		ft_isdigit(int nb);
 int		ft_isprint(int n);
-
+char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -34,7 +34,7 @@ void	*ft_memset(void *ptr, int nb, size_t length);
 
 
 
-
+char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 
@@ -48,12 +48,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 
 
+
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int nb);
 int		ft_toupper(int nb);
-
-
-
-char	*ft_strdup(const char *s);
-
 
 #endif
