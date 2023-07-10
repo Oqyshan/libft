@@ -6,27 +6,32 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:36:13 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/09 21:31:54 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/10 15:16:24 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	c;
-	unsigned int	d;
+	size_t	i;
+	size_t	dst_len;
+	size_t	src_len;
 
-	if (size <= ft_strlen(dest))
-		return (size + ft_strlen(src));
-	c = ft_strlen(dest);
-	d = 0;
-	while (src[d] != '\0' && c + 1 < size)
+	i = 0;
+	if (size == '\0')
+		return (ft_strlen(src));
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (!size)
+		return (src_len);
+	while (src[i] && dst_len + i < size - 1)
 	{
-		dest[c] = src[d];
-		c++;
-		d++;
+		dst[dst_len + i] = src[i];
+		i++;
 	}
-	dest[c] = '\0';
-	return (ft_strlen(dest) + ft_strlen(&src[d]));
+	dst[dst_len + i] = '\0';
+	if (dst_len > size)
+		return (src_len + size);
+	return (src_len + dst_len);
 }

@@ -6,7 +6,7 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 13:27:31 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/09 21:36:10 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/10 13:37:57 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,4 @@ void	*ft_memset(void *ptr, int nb, size_t length)
 		index++;
 	}
 	return (ptr);
-}
-
-int main()
-{
-	
 }

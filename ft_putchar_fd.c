@@ -6,7 +6,13 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:38:10 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/05 14:55:46 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/10 17:45:41 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write (fd, &c, 1);
+}

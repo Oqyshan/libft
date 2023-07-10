@@ -6,32 +6,27 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:34:18 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/09 21:29:36 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/10 15:59:22 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *str, const char *needle, size_t len)
 {
+	size_t	needle_len;
 	size_t	i;
-	size_t	j;
-	size_t	n_len;
 
-	i = 0;
-	n_len = ft_strlen(needle);
-	if (!haystack)
+	if (!str && !len)
 		return (NULL);
-	if (!n_len || haystack == needle)
-		return ((char *)haystack);
-	while (((char *)(haystack))[i] != '\0' && i < len)
+	if (*needle == 0)
+		return ((char *) str);
+	needle_len = ft_strlen(needle);
+	i = 0;
+	while (str[i] && i < len && needle_len <= len - i)
 	{
-		j = 0;
-		while (((char *)(haystack))[i + j] && needle[j] &&
-		(((char *)(haystack))[i + j] == needle[j] && i + j < len))
-			j++;
-		if (j == n_len)
-			return ((char *)haystack + i);
+		if (ft_strncmp(str + i, needle, needle_len) == 0)
+			return ((char *) str + i);
 		i++;
 	}
 	return (NULL);

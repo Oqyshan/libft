@@ -6,7 +6,15 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:38:23 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/05 14:55:46 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/10 17:46:40 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	write (fd, s, ft_strlen(s));
+}
