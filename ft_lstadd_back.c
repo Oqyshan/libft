@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/03 15:30:27 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/13 18:33:08 by ounal            ###   ########.fr       */
+/*   Created: 2023/07/13 12:55:37 by ounal             #+#    #+#             */
+/*   Updated: 2023/07/13 16:50:03 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int nb)
+#include "libft.h"
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if ((nb >= 'a' && nb <= 'z') || (nb >= 'A' && nb <= 'Z'))
-		return (1);
-	if (nb >= '0' && nb <= '9')
-		return (1);
-	return (0);
+	t_list	*swap;
+
+	if (lst)
+	{
+		if (*lst == 0)
+			*lst = new;
+		else
+		{
+			swap = ft_lstlast(*lst);
+			swap->next = new;
+		}
+	}
 }
