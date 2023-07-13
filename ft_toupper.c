@@ -6,11 +6,9 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 12:18:31 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/07 12:29:50 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/13 10:16:53 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int nb)
 {

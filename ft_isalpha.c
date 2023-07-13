@@ -6,11 +6,9 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 13:37:11 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/07 12:26:59 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/13 10:17:16 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int nb)
 {

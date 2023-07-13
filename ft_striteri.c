@@ -6,11 +6,9 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:37:51 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/10 16:01:35 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/13 10:17:02 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

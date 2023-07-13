@@ -6,11 +6,9 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 15:30:27 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/07 12:26:56 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/13 10:20:37 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalnum(int nb)
 {

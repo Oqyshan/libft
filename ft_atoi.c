@@ -6,11 +6,9 @@
 /*   By: ounal <ounal@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 13:52:13 by ounal             #+#    #+#             */
-/*   Updated: 2023/07/06 15:58:01 by ounal            ###   ########.fr       */
+/*   Updated: 2023/07/13 10:20:20 by ounal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
